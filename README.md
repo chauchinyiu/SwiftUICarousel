@@ -1,3 +1,8 @@
+References:
+https://medium.com/flawless-app-stories/implementing-snap-carousel-in-swiftui-3ae084504670
+https://www.vadimbulavin.com/asynchronous-swiftui-image-loading-from-url-with-combine-and-swift/
+ 
+
 # SwiftUICarousel
 
 [![CI Status](https://img.shields.io/travis/chauchinyiu/SwiftUICarousel.svg?style=flat)](https://travis-ci.org/chauchinyiu/SwiftUICarousel)
@@ -22,7 +27,7 @@ pod 'SwiftUICarousel'
 
 ## Author
 
-chauchinyiu, chin.yiu.chau.extern@fiduciagad.de
+chauchinyiu, chinyiu.chau@gmail.com
 
 ## License
 

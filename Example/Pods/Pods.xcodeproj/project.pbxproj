@@ -33,13 +33,14 @@
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D82C1608B9169D2D23D7BAEA0991F0CE /* Pods-SwiftUICarousel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B0B2011EA8A8294CD1E3AD05982EBB /* Pods-SwiftUICarousel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4C11549F3D95484ED4FA609F9544887 /* Pods-SwiftUICarousel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F4ADD5769FBD563F32796236C3734F /* Pods-SwiftUICarousel_Tests-dummy.m */; };
-		E595EAFA25B639FA00E87128 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EAF925B639FA00E87128 /* Carousel.swift */; };
-		E595EB1825B64B6F00E87128 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EB1725B64B6F00E87128 /* Canvas.swift */; };
-		E595EB2225B64B9C00E87128 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EB2125B64B9C00E87128 /* Item.swift */; };
-		E595EB6E25B7AAC200E87128 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EB6D25B7AAC200E87128 /* AsyncImage.swift */; };
-		E595EB7425B7AB3000E87128 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EB7325B7AB3000E87128 /* ImageLoader.swift */; };
-		E595EB8425B7AB7800E87128 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EB8325B7AB7800E87128 /* ImageCache.swift */; };
-		E595EB8A25B7ABAB00E87128 /* ImageCacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595EB8925B7ABAB00E87128 /* ImageCacheKey.swift */; };
+		E571DBC825B8867A0031E27D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBBD25B8867A0031E27D /* ImageCache.swift */; };
+		E571DBC925B8867A0031E27D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBBE25B8867A0031E27D /* ImageLoader.swift */; };
+		E571DBCA25B8867A0031E27D /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBBF25B8867A0031E27D /* AsyncImage.swift */; };
+		E571DBCB25B8867A0031E27D /* ImageCacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC025B8867A0031E27D /* ImageCacheKey.swift */; };
+		E571DBCC25B8867A0031E27D /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC225B8867A0031E27D /* Carousel.swift */; };
+		E571DBCD25B8867A0031E27D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC325B8867A0031E27D /* Item.swift */; };
+		E571DBCE25B8867A0031E27D /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC425B8867A0031E27D /* Canvas.swift */; };
+		E571DBCF25B8867A0031E27D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = E571DBC625B8867A0031E27D /* .gitkeep */; };
 		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
 		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,13 +125,14 @@
 		D5B0AEBB8856B2C3C27D70A7D90BE3EB /* Pods-SwiftUICarousel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUICarousel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		D953EBDC51B2A7A681D35949FC741D02 /* Pods-SwiftUICarousel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftUICarousel_Example-dummy.m"; sourceTree = "<group>"; };
-		E595EAF925B639FA00E87128 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
-		E595EB1725B64B6F00E87128 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
-		E595EB2125B64B9C00E87128 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		E595EB6D25B7AAC200E87128 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
-		E595EB7325B7AB3000E87128 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		E595EB8325B7AB7800E87128 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		E595EB8925B7ABAB00E87128 /* ImageCacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheKey.swift; sourceTree = "<group>"; };
+		E571DBBD25B8867A0031E27D /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		E571DBBE25B8867A0031E27D /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E571DBBF25B8867A0031E27D /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		E571DBC025B8867A0031E27D /* ImageCacheKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheKey.swift; sourceTree = "<group>"; };
+		E571DBC225B8867A0031E27D /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		E571DBC325B8867A0031E27D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E571DBC425B8867A0031E27D /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		E571DBC625B8867A0031E27D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E854F9F80941CA4F3957F1577B1AE324 /* Pods-SwiftUICarousel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftUICarousel_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		EEE5C2735422FA7FFD42D2928FEB8650 /* Pods-SwiftUICarousel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftUICarousel_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -252,8 +254,7 @@
 		B45CC7CB1353BD3288308F1E3B0F6A76 /* SwiftUICarousel */ = {
 			isa = PBXGroup;
 			children = (
-				E595EB6C25B7AAA500E87128 /* AsyncImage */,
-				E595EB6B25B7AA9400E87128 /* Carousel */,
+				E571DBB925B8867A0031E27D /* SwiftUICarousel */,
 				AD8DB4071C8A095A3367FD276AA6871F /* Pod */,
 				32B316FDF027F8D06E6A2D1BA2013D47 /* Support Files */,
 			);
@@ -334,25 +335,51 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E595EB6B25B7AA9400E87128 /* Carousel */ = {
+		E571DBB925B8867A0031E27D /* SwiftUICarousel */ = {
 			isa = PBXGroup;
 			children = (
-				E595EAF925B639FA00E87128 /* Carousel.swift */,
-				E595EB1725B64B6F00E87128 /* Canvas.swift */,
-				E595EB2125B64B9C00E87128 /* Item.swift */,
+				E571DBBA25B8867A0031E27D /* Classes */,
+				E571DBC525B8867A0031E27D /* Assets */,
+			);
+			path = SwiftUICarousel;
+			sourceTree = "<group>";
+		};
+		E571DBBA25B8867A0031E27D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E571DBBC25B8867A0031E27D /* AsyncImage */,
+				E571DBC125B8867A0031E27D /* Carousel */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E571DBBC25B8867A0031E27D /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				E571DBBD25B8867A0031E27D /* ImageCache.swift */,
+				E571DBBE25B8867A0031E27D /* ImageLoader.swift */,
+				E571DBBF25B8867A0031E27D /* AsyncImage.swift */,
+				E571DBC025B8867A0031E27D /* ImageCacheKey.swift */,
+			);
+			path = AsyncImage;
+			sourceTree = "<group>";
+		};
+		E571DBC125B8867A0031E27D /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				E571DBC225B8867A0031E27D /* Carousel.swift */,
+				E571DBC325B8867A0031E27D /* Item.swift */,
+				E571DBC425B8867A0031E27D /* Canvas.swift */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
 		};
-		E595EB6C25B7AAA500E87128 /* AsyncImage */ = {
+		E571DBC525B8867A0031E27D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E595EB6D25B7AAC200E87128 /* AsyncImage.swift */,
-				E595EB7325B7AB3000E87128 /* ImageLoader.swift */,
-				E595EB8325B7AB7800E87128 /* ImageCache.swift */,
-				E595EB8925B7ABAB00E87128 /* ImageCacheKey.swift */,
+				E571DBC625B8867A0031E27D /* .gitkeep */,
 			);
-			path = AsyncImage;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		E81A37DBDE41E671312C56736544E2FA /* Pods */ = {
@@ -519,6 +546,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					BD16E369CE575B6713C9CB9126ADD96B = {
+						LastSwiftMigration = 1230;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -567,6 +599,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E571DBCF25B8867A0031E27D /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,14 +642,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E595EB6E25B7AAC200E87128 /* AsyncImage.swift in Sources */,
-				E595EB2225B64B9C00E87128 /* Item.swift in Sources */,
-				E595EB7425B7AB3000E87128 /* ImageLoader.swift in Sources */,
-				E595EAFA25B639FA00E87128 /* Carousel.swift in Sources */,
+				E571DBCA25B8867A0031E27D /* AsyncImage.swift in Sources */,
+				E571DBC825B8867A0031E27D /* ImageCache.swift in Sources */,
 				45C892A950EC39922EE8D2B7D0C3071E /* SwiftUICarousel-dummy.m in Sources */,
-				E595EB8425B7AB7800E87128 /* ImageCache.swift in Sources */,
-				E595EB8A25B7ABAB00E87128 /* ImageCacheKey.swift in Sources */,
-				E595EB1825B64B6F00E87128 /* Canvas.swift in Sources */,
+				E571DBCE25B8867A0031E27D /* Canvas.swift in Sources */,
+				E571DBCC25B8867A0031E27D /* Carousel.swift in Sources */,
+				E571DBCD25B8867A0031E27D /* Item.swift in Sources */,
+				E571DBCB25B8867A0031E27D /* ImageCacheKey.swift in Sources */,
+				E571DBC925B8867A0031E27D /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +842,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B662730CBAB8DADF8F4719DDEFBDA11 /* SwiftUICarousel.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -828,6 +862,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -839,6 +874,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B33710D05C02E7D7B19C191BEEC620E9 /* SwiftUICarousel.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
