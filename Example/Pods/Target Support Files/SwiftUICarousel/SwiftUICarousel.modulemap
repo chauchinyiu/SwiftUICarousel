@@ -1,0 +1,6 @@
+framework module SwiftUICarousel {
+  umbrella header "SwiftUICarousel-umbrella.h"
+
+  export *
+  module * { export * }
+}

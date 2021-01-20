@@ -7,12 +7,18 @@
 //
 
 import UIKit
-
+import SwiftUI
+import SwiftUICarousel
+ 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let childView = UIHostingController(rootView: SwiftUIView(uiState: UIStateModel()))
+        addChildViewController(childView)
+        childView.view.frame = self.view.frame
+        view.addSubview(childView.view)
+        childView.didMove(toParent: self)
     }
 
     override func didReceiveMemoryWarning() {
