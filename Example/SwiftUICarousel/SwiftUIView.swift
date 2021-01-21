@@ -10,65 +10,70 @@ import SwiftUI
 import SwiftUICarousel
 
 struct SwiftUIView: View {
-    var uiState: UIStateModel
+    @ObservedObject var uiState: UIStateModel
     
     var body: some View
     {
         let spacing:            CGFloat = 16
-        let widthOfHiddenCards: CGFloat = 32    // UIScreen.main.bounds.width - 10
-        let cardHeight:         CGFloat = 279
-
-        let items = [
-                        Card(id: 0, name: "Hey", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png")),
-                        Card(id: 1, name: "Ho", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png")),
-                        Card(id: 2, name: "Lets", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png")),
-                        Card(id: 3, name: "Go", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png"))
-                    ]
+        let displayWidthOfSideCards: CGFloat = 32    // UIScreen.main.bounds.width - 10
+        let cardHeight:         CGFloat = 200
         
-        return  Canvas
-                {
-                    //
-                    // TODO: find a way to avoid passing same arguments to Carousel and Item
-                    //
-                    Carousel( numberOfItems: CGFloat( items.count ), spacing: spacing, widthOfHiddenCards: widthOfHiddenCards )
+        let items = [
+            Card(id: 0, name: "john wick", number: "123184971238711", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png")),
+            Card(id: 1, name: "Hotung helo", number: "123184971238711", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png")),
+            Card(id: 2, name: "Van dele No", number: "123184971238711", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png")),
+            Card(id: 3, name: "Lok Wok", number: "123184971238711", imageURL: URL(string:"https://i.ibb.co/JRys8bV/karten-skizze-master.png"))
+        ]
+        VStack {
+            Canvas
+            {
+                Carousel( spacing: spacing, displayWidthOfSideCards: displayWidthOfSideCards, data: items) { item in
+                    ItemView( _id:  Int(item.id),
+                              spacing: spacing,
+                              displayWidthOfSideCards: displayWidthOfSideCards,
+                              cardHeight: cardHeight )
                     {
-                        ForEach( items, id: \.self.id ) { item in
-   
-                            Item( _id:                  Int(item.id),
-                                  spacing:              spacing,
-                                  widthOfHiddenCards:   widthOfHiddenCards,
-                                  cardHeight:           cardHeight )
-                            {
-                                if let url = item.imageURL {
-                                    AsyncImage(
-                                        url: url,
-                                        placeholder: { Text("Loading ...") },
-                                        image: { Image(uiImage: $0).resizable() }
-                                    ).aspectRatio(contentMode: .fit)
-                                }else{
-                                    Text("\(item.name)")
-                                }
-                            }
-                            .foregroundColor( Color.red )
-                            .background( Color.black )
-                            .cornerRadius( 8 )
-                            .shadow( color: Color( "shadow1" ), radius: 4, x: 0, y: 4 )
-                            .transition( AnyTransition.slide )
-                            .animation( .spring() )
+                        ZStack {
+                            Image("karten_skizze_master")
+                                .resizable()
+                                .scaledToFit()
+                                .edgesIgnoringSafeArea(.all)
+                            
+                            VStack (alignment:.leading, spacing: 20.0) {
+                                Spacer()
+                                Text("\(item.number)")
+                                
+                                Text("\(item.name)")
+                                Spacer()
+                            }.background(Color.green)
+                            .frame( height: cardHeight, alignment: .leading)
+                            
                         }
-                    }
-                    .environmentObject( self.uiState )
+                    }.foregroundColor( Color.white )
+                    
+                    .cornerRadius( 25 )
+                    .shadow( color: Color.blue, radius: 20, x: 0, y: 4 )
+                    .transition( AnyTransition.slide )
+                    .animation( .spring() )
+                    
                 }
+                .environmentObject( self.uiState )
+            }
+            Spacer()
+            Text("Page : \(self.uiState.activeCard)")
+        }
     }
 }
 
 struct Card: Decodable, Hashable, Identifiable {
     var id: Int
     var name: String = ""
+    var number: String = ""
     var imageURL: URL?
 }
-//struct SwiftUIView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SwiftUIView()
-//    }
-//}
+
+struct SwiftUIView_Previews: PreviewProvider {
+    static var previews: some View {
+        SwiftUIView(uiState: UIStateModel())
+    }
+}

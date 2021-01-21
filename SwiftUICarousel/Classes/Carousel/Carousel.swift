@@ -9,63 +9,76 @@ import SwiftUI
 
 
 public class UIStateModel: ObservableObject {
-    @Published var activeCard: Int = 0
+    @Published public var activeCard: Int = 0
     @Published var screenDrag: Float = 0.0
     public init() {
         
     }
 }
 
-
-public struct Carousel<Items : View> : View {
-    let items: Items
-    let numberOfItems: CGFloat //= 8
-    let spacing: CGFloat //= 16
-    let widthOfHiddenCards: CGFloat //= 32
+public struct Carousel<Data, Content>: View
+where Data : RandomAccessCollection, Content : View, Data.Element : Identifiable
+{
+    private let data: [Data.Element]
+    private let content: (Data.Element) -> Content
+    
+    
+    let numberOfItems: Int
+    let spacing: CGFloat
+    let displayWidthOfSideCards: CGFloat
     let totalSpacing: CGFloat
     let cardWidth: CGFloat
     
-    @GestureState var isDetectingLongPress = false
+    @GestureState var isDetectingLongPress = true
     
     @EnvironmentObject var uiState: UIStateModel
     
     public init(
-        numberOfItems: CGFloat,
         spacing: CGFloat,
-        widthOfHiddenCards: CGFloat,
-        @ViewBuilder _ items: () -> Items) {
+        displayWidthOfSideCards: CGFloat,
+        data: Data,
+        @ViewBuilder content: @escaping (Data.Element) ->  Content) {
         
-        self.items = items()
-        self.numberOfItems = numberOfItems
+        self.data = data.map { $0 }
+        self.content = content
+        self.numberOfItems = self.data.count
         self.spacing = spacing
-        self.widthOfHiddenCards = widthOfHiddenCards
-        self.totalSpacing = (numberOfItems - 1) * spacing
-        self.cardWidth = UIScreen.main.bounds.width - (widthOfHiddenCards*2) - (spacing*2) //279
+        self.displayWidthOfSideCards = displayWidthOfSideCards
+        self.totalSpacing = CGFloat((numberOfItems - 1)) * spacing
+        self.cardWidth = UIScreen.main.bounds.width - (displayWidthOfSideCards*2) - (spacing*2) //279
         
     }
     
-    public var body: some View {
-        let totalCanvasWidth: CGFloat = (cardWidth * numberOfItems) + totalSpacing
+    private func calculateOffset() -> Float{
+        let totalCanvasWidth: CGFloat = (cardWidth * CGFloat(numberOfItems)) + totalSpacing
         let xOffsetToShift = (totalCanvasWidth - UIScreen.main.bounds.width) / 2
-        let leftPadding = widthOfHiddenCards + spacing
+        let leftPadding = displayWidthOfSideCards + spacing
         let totalMovement = cardWidth + spacing
-        
-        let activeOffset = xOffsetToShift + (leftPadding) - (totalMovement * CGFloat(uiState.activeCard))
-        let nextOffset = xOffsetToShift + (leftPadding) - (totalMovement * CGFloat(uiState.activeCard) + 1)
+        let xmove = xOffsetToShift + (leftPadding)
+        let activeCardTotalMove =  totalMovement * CGFloat(uiState.activeCard)
+        let activeOffset =  xmove - activeCardTotalMove
+        let nextOffset = xmove - (activeCardTotalMove + 1)
         
         var calcOffset = Float(activeOffset)
         
         if (calcOffset != Float(nextOffset)) {
             calcOffset = Float(activeOffset) + uiState.screenDrag
         }
+        return calcOffset
+    }
+    
+    public var body: some View {
         
         return HStack(alignment: .center, spacing: spacing) {
-            items
+            ForEach(  data, id: \.self.id ) { data in
+                self.content(data)
+            }
+            .transition( AnyTransition.slide )
+            .animation( .spring() )
         }
-        .offset(x: CGFloat(calcOffset), y: 0)
+        .offset(x: CGFloat(self.calculateOffset()), y: 0)
         .gesture(DragGesture().updating($isDetectingLongPress) { currentState, gestureState, transaction in
             self.uiState.screenDrag = Float(currentState.translation.width)
-            
         }.onEnded { value in
             self.uiState.screenDrag = 0
             
@@ -83,11 +96,7 @@ public struct Carousel<Items : View> : View {
         }
         )
     }
+
 }
 
-struct Carousel_Previews: PreviewProvider {
-    static var previews: some View {
-            Carousel(numberOfItems: 10, spacing: 20, widthOfHiddenCards: 200) {
-        }
-    }
-}
+ 

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftUICarousel'
-  s.version          = '0.0.1'
-  s.summary          = 'SwiftUI version of Carousel with AsyncImage framework'
+  s.version          = '0.0.2'
+  s.summary          = 'SwiftUI version of Carousel framework (beta)'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      =  'SwiftUI version of Carousel with AsyncImage. These two features can separatly be used'
+  s.description      =  'SwiftUI version of Carousel. This framework can be used >= ios 13'
 
   s.homepage         = 'https://github.com/chauchinyiu/SwiftUICarousel'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

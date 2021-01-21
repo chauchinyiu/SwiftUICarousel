@@ -33,12 +33,8 @@
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D82C1608B9169D2D23D7BAEA0991F0CE /* Pods-SwiftUICarousel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B0B2011EA8A8294CD1E3AD05982EBB /* Pods-SwiftUICarousel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4C11549F3D95484ED4FA609F9544887 /* Pods-SwiftUICarousel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F4ADD5769FBD563F32796236C3734F /* Pods-SwiftUICarousel_Tests-dummy.m */; };
-		E571DBC825B8867A0031E27D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBBD25B8867A0031E27D /* ImageCache.swift */; };
-		E571DBC925B8867A0031E27D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBBE25B8867A0031E27D /* ImageLoader.swift */; };
-		E571DBCA25B8867A0031E27D /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBBF25B8867A0031E27D /* AsyncImage.swift */; };
-		E571DBCB25B8867A0031E27D /* ImageCacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC025B8867A0031E27D /* ImageCacheKey.swift */; };
 		E571DBCC25B8867A0031E27D /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC225B8867A0031E27D /* Carousel.swift */; };
-		E571DBCD25B8867A0031E27D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC325B8867A0031E27D /* Item.swift */; };
+		E571DBCD25B8867A0031E27D /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC325B8867A0031E27D /* ItemView.swift */; };
 		E571DBCE25B8867A0031E27D /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571DBC425B8867A0031E27D /* Canvas.swift */; };
 		E571DBCF25B8867A0031E27D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = E571DBC625B8867A0031E27D /* .gitkeep */; };
 		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
@@ -125,12 +121,8 @@
 		D5B0AEBB8856B2C3C27D70A7D90BE3EB /* Pods-SwiftUICarousel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftUICarousel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		D953EBDC51B2A7A681D35949FC741D02 /* Pods-SwiftUICarousel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftUICarousel_Example-dummy.m"; sourceTree = "<group>"; };
-		E571DBBD25B8867A0031E27D /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		E571DBBE25B8867A0031E27D /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		E571DBBF25B8867A0031E27D /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
-		E571DBC025B8867A0031E27D /* ImageCacheKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheKey.swift; sourceTree = "<group>"; };
 		E571DBC225B8867A0031E27D /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
-		E571DBC325B8867A0031E27D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E571DBC325B8867A0031E27D /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E571DBC425B8867A0031E27D /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		E571DBC625B8867A0031E27D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E658F388F01C72599CA75537950B6095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -347,28 +339,16 @@
 		E571DBBA25B8867A0031E27D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E571DBBC25B8867A0031E27D /* AsyncImage */,
 				E571DBC125B8867A0031E27D /* Carousel */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		E571DBBC25B8867A0031E27D /* AsyncImage */ = {
-			isa = PBXGroup;
-			children = (
-				E571DBBD25B8867A0031E27D /* ImageCache.swift */,
-				E571DBBE25B8867A0031E27D /* ImageLoader.swift */,
-				E571DBBF25B8867A0031E27D /* AsyncImage.swift */,
-				E571DBC025B8867A0031E27D /* ImageCacheKey.swift */,
-			);
-			path = AsyncImage;
 			sourceTree = "<group>";
 		};
 		E571DBC125B8867A0031E27D /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
 				E571DBC225B8867A0031E27D /* Carousel.swift */,
-				E571DBC325B8867A0031E27D /* Item.swift */,
+				E571DBC325B8867A0031E27D /* ItemView.swift */,
 				E571DBC425B8867A0031E27D /* Canvas.swift */,
 			);
 			path = Carousel;
@@ -642,14 +622,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E571DBCA25B8867A0031E27D /* AsyncImage.swift in Sources */,
-				E571DBC825B8867A0031E27D /* ImageCache.swift in Sources */,
 				45C892A950EC39922EE8D2B7D0C3071E /* SwiftUICarousel-dummy.m in Sources */,
 				E571DBCE25B8867A0031E27D /* Canvas.swift in Sources */,
 				E571DBCC25B8867A0031E27D /* Carousel.swift in Sources */,
-				E571DBCD25B8867A0031E27D /* Item.swift in Sources */,
-				E571DBCB25B8867A0031E27D /* ImageCacheKey.swift in Sources */,
-				E571DBC925B8867A0031E27D /* ImageLoader.swift in Sources */,
+				E571DBCD25B8867A0031E27D /* ItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
