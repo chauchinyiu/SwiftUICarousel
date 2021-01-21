@@ -4,14 +4,14 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - SwiftUICarousel (0.1.0)
+  - SwiftUICarousel (0.0.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
   - SwiftUICarousel (from `../`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SwiftUICarousel: c5d1e79b52edd0cf9fc1fd4e6ba96c4b2a56f34a
+  SwiftUICarousel: 05038c07cd75ca38f1b926a6e375e70e18ddb4c2
 
-PODFILE CHECKSUM: f04792eedb55931e8f95c28856e898d384d8bf65
+PODFILE CHECKSUM: f7d477da966888b04998ca0e427c3d49e5293070
 
 COCOAPODS: 1.10.1
